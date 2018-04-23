@@ -44,7 +44,7 @@ module.exports = {
       {
         test: /\.sass$/,
         loaders: ["style", "css", "sass"],
-        include: resolve('node_modules')]
+        include: resolve('node_modules')
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

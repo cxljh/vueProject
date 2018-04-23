@@ -11,7 +11,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'hello cxl'
+      msg: 'hello'
     }
   }
 }
