@@ -21,6 +21,7 @@
   	 <section>
        <vselect size='medium' placeholder='选择一个吧' :optionsInp='options' multiple></vselect>
        <vTotop text='' textColor='rgb(255, 0, 0)' pageY='30'></vTotop>
+       <vTable :textPos="center"></vTable>
         <transition name="fade" mode="out-in">
             <!-- <router-view></router-view> -->
            
@@ -33,16 +34,19 @@
 <script>
 import vselect from '@/components/select'
 import vTotop from '@/components/scroll/toTop'
+import vTable from '@/components/table/table'
 export default { 
   name: 'Home',
   components:{
       vselect,
-      vTotop
+      vTotop,
+      vTable
   }, 
   data () {
     return {
       msg: 'hello cxl',
       mesage:'',
+      center:"center",
       checkedNames: [],
       options:[
         {name:'11'},
@@ -50,6 +54,23 @@ export default {
         {name:'33'},
         {name:'44'},
       ],
+      data:[{
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          }],
       show:false,
       num:-1
     }
@@ -63,7 +84,8 @@ export default {
       }
         
     }
-  }
+  },
+ 
 }
 </script>
 

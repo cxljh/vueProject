@@ -44,7 +44,7 @@ import { scrollTop } from './scrollTop'; // 引入动画过渡的实现
             type: String,
             default: '50px'
         },
-        pageY:{
+        pageY:{//显示的距离
             type:String,
             default:10
         }
