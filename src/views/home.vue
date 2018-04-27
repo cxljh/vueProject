@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <aside>
+    <!-- <aside>
       <div class="logo">
           <img src="/static/icon/logo.png">
       </div>
@@ -17,11 +17,15 @@
         </li>
       </ul>
       
-    </aside>
+    </aside> -->
   	 <section>
        <vselect size='medium' placeholder='选择一个吧' :optionsInp='options' multiple></vselect>
        <vTotop text='' textColor='rgb(255, 0, 0)' pageY='30'></vTotop>
-       <vTable :textPos="center"></vTable>
+       <vTable :textPos="center" :data='data'>
+         <vTd>姓名</vTd>
+         <vTd>日期</vTd>
+         <vTd>地区</vTd>
+       </vTable>
         <transition name="fade" mode="out-in">
             <!-- <router-view></router-view> -->
            
@@ -35,6 +39,7 @@
 import vselect from '@/components/select'
 import vTotop from '@/components/scroll/toTop'
 import vTable from '@/components/table/table'
+import vTd from '@/components/table/yu-td'
 export default { 
   name: 'Home',
   components:{

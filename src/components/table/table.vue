@@ -1,6 +1,8 @@
 <template>
-    <div class="yu-table"
+    <div 
+    class="yu-table"
     :style="{'text-align':textPos}"
+    :data='data'
     >
         <table cellspacing="0">
             <thead>
@@ -10,18 +12,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in data">
-                    <yuTd :data='item.name' :border='border'></yuTd>
-                    <yuTd :data='item.date' :border='border'></yuTd>
-                    <yuTd :data='item.address' :border='border'></yuTd>
-                </tr>
+                <yuTr :data='item.name' :border='border' v-for="item in data"></yuTr>
             </tbody>
         </table>
     </div>
 </template>
 
 <script>
-import yuTd from './td'
+import yuTr from './yu-tr'
 export default {
    name: 'yu-table',
    components:{

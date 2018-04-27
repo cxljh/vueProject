@@ -86,7 +86,7 @@ import { scrollTop } from './scrollTop'; // 引入动画过渡的实现
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background: #e3e3e3;
+    background: #fff;
     border-radius: 4px;
     position: fixed;
     bottom: 50px;
@@ -97,7 +97,7 @@ import { scrollTop } from './scrollTop'; // 引入动画过渡的实现
     display: inline-block;
     width: 50px;
     height: 50px;
-    background: url(../../assets/logo.png) no-repeat center;
+    background: url(../../assets/back.png) no-repeat center;
     background-size: 100%;
 }
 </style>
