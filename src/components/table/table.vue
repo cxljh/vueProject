@@ -1,25 +1,30 @@
 <template>
     <div 
     class="yu-table"
-    :style="{'text-align':textPos}"
     :data='data'
     >
         <table cellspacing="0">
             <thead>
                 <tr class="yu-th">
-                    <yuTd v-for="item in title" :data='item.tit' :border='border'></yuTd>
+                    <yuTd v-for="item in title" :data='item.tit'></yuTd>
                     
                 </tr>
             </thead>
             <tbody>
-                <yuTr :data='item.name' :border='border' v-for="item in data"></yuTr>
+                <tr v-for="item in data">
+                    <yuTd :data='item.name' :border='border'></yuTd>                  
+                    <yuTd :data='item.sex' :border='border'></yuTd>
+                    <yuTd :data='item.date' :border='border'></yuTd>
+                    <yuTd :data='item.address' :border='border'></yuTd>
+                </tr>
             </tbody>
         </table>
     </div>
 </template>
 
 <script>
-import yuTr from './yu-tr'
+// import yuTr from './yu-tr'
+import yuTd from './yu-td'
 export default {
    name: 'yu-table',
    components:{
@@ -49,22 +54,27 @@ export default {
           data:[{
             date: '2016-05-02',
             name: '王小虎',
+            sex:'男',
             address: '上海市普陀区金沙江路 1518 弄'
           }, {
             date: '2016-05-04',
             name: '王小虎',
+            sex:'男',
             address: '上海市普陀区金沙江路 1517 弄'
           }, {
             date: '2016-05-01',
             name: '王小虎',
+            sex:'男',
             address: '上海市普陀区金沙江路 1519 弄'
           }, {
             date: '2016-05-03',
             name: '王小虎',
+            sex:'男',
             address: '上海市普陀区金沙江路 1516 弄'
           }],
           title:[
               {tit:'姓名'},
+              {tit:'性别'},
               {tit:'日期'},
               {tit:'地区'}
               ]
