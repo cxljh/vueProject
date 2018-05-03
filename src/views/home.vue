@@ -21,7 +21,10 @@
   	 <section>
        <vselect size='medium' placeholder='选择一个吧' :optionsInp='options' multiple></vselect>
        <vTotop text='' textColor='rgb(255, 0, 0)' pageY='30'></vTotop>
-       <vTable border></vTable>
+       <!-- <vTable border></vTable> -->
+       <yuRadio v-model="radio" label='1' border name='demo' size="medium" disabled>选项一</yuRadio>
+       <yuRadio v-model="radio" label='2' border name='demo' size="small" disabled>选项二</yuRadio>
+       <yuRadio v-model="radio" label='3'  name='demo' size="mini" disabled>选项三</yuRadio>
        <!-- <table cellspacing="0" :style="{'width':'100%'}">
             <thead>
                 <tr class="yu-th">
@@ -52,13 +55,16 @@ import vselect from '@/components/select'
 import vTotop from '@/components/scroll/toTop'
 import vTable from '@/components/table/table'
 import yuTd from '@/components/table/yu-td'
+// import yuRadio from '@/components/radio/radio'
+import yuRadio from '@/components/Rad/radio'
 export default { 
   name: 'Home',
   components:{
       vselect,
       vTotop,
       vTable,
-      yuTd
+      yuTd,
+      yuRadio
   }, 
   data () {
     return {
@@ -66,6 +72,7 @@ export default {
       mesage:'',
       center:"center",
       checkedNames: [],
+       radio: '1',
       options:[
         {name:'11'},
         {name:'22'},
